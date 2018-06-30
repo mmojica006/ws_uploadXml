@@ -1,0 +1,72 @@
+-----------Exception Details on  6/30/2018 9:20:34 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 6/30/2018 9:20:34 AM
+
+Error Line No : line 67
+
+Error Message: DirectoryNotFoundException
+
+Exception Type: System.IO.DirectoryNotFoundException
+
+Error Location : Could not find a part of the path 'C:\Program Files (x86)\IIS Express\~\File\xmlremesa.xml'.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  6/30/2018 9:24:56 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 6/30/2018 9:24:56 AM
+
+Error Line No : ine 230
+
+Error Message: ArgumentException
+
+Exception Type: System.ArgumentException
+
+Error Location : Illegal characters in path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  6/30/2018 9:33:53 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 6/30/2018 9:33:53 AM
+
+Error Line No : ine 232
+
+Error Message: ArgumentException
+
+Exception Type: System.ArgumentException
+
+Error Location : Illegal characters in path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+

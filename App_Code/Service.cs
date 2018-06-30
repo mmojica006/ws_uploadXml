@@ -87,7 +87,7 @@ public class Service : System.Web.Services.WebService
 
     private void saveToBD(string oTrama)
     {
-        if (remesasDTO.saveFileXML("WebService",oTrama))
+        if (remesasDTO.saveXML("WebService",oTrama))
         {
             string resp = "Ok";
         }

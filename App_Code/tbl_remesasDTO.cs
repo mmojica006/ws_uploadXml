@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Xml;
+using System.Xml.Linq;
 
 /// <summary>
 /// Summary description for tbl_remesasDTO
@@ -203,24 +206,26 @@ public class tbl_remesasDTO
 
     }
 
-    public bool saveFileXML(string usuario,  string pathFileXml)
+    public bool saveXML(string usuario,  string strXML)
     {
 
         tbl_remesasDTO _remesas = new tbl_remesasDTO();
         _remesas.UsuarioCarga = ObtenerUsuarioTopaz(usuario.ToLower());
         // string Domain = HttpContext.Current.Request.Url.Authority;
 
-
+        XDocument xDoc = XDocument.Parse(strXML);
+     
+        //File.WriteAllText("xmlremesa.xml", strXML, Encoding.ASCII);
 
         try
         {
-            if (pathFileXml != null)
+            if (strXML != null)
             {
                 // string archivo = usuario + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(fileXml.FileName);
                 //fileXml.SaveAs(HttpContext.Current.Server.MapPath("~/upload/" + archivo));
 
                 // string path = HttpContext.Current.Server.MapPath("~/upload/" + archivo);
-                String path = pathFileXml;
+                String path = strXML;
 
 
                 String URLString = path;
