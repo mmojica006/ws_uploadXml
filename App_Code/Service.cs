@@ -20,6 +20,8 @@ public class Service : System.Web.Services.WebService
     private string Usuario;
     private string password;
 
+    SqlHelper helper = new SqlHelper();
+
     tbl_remesasDTO remesasDTO = new tbl_remesasDTO();
     #endregion
     
@@ -31,29 +33,19 @@ public class Service : System.Web.Services.WebService
     #endregion
 
     #region EXEPTION PERSONALIZADA
-    //public class loginExeption : Exception
-    //{
-    //    public loginExeption()
-    //    {
 
-    //    }
-    //    public loginExeption(string message)
-    //       : base(message)
-    //    {
-    //    }
-
-    //    public loginExeption(string message, Exception inner)
-    //        : base(message, inner)
-    //    {
-
-    //    }
-    //}
     #endregion
-    
+    ;
     #region METODOS
     [WebMethod]
     public DataTable ReceiveData(string oTrama, string oUser, string oPassword)
     {
+        string fileName = string.Empty;
+        List<string> email = new List<string>();
+        email.Add("moises.mojica@crediexpress.com.ni");
+
+        helper.sendEmail("jose.chevez@crediexpress.com.ni", "12244896Jagnika*", email, "TEST", "Hola mundo");
+
               
         try
         {
@@ -63,8 +55,9 @@ public class Service : System.Web.Services.WebService
                 //oTrama = "<ProductInfo><Product><Name>Test1</Name><index>0</index></Product><Product><Name>Test2</Name><index>1</index></Product><Product><Name>Test3</Name><index>2</index></Product></ProductInfo>";
 
                 XDocument xDoc = XDocument.Parse(oTrama);
-                StoreData(oTrama, oUser, oPassword);
-                saveToBD(oTrama);
+                fileName= StoreXML(oTrama);
+                remesasDTO.saveXmlToBd( oUser, fileName);
+                // saveToBD(oTrama);
                 return new DataTable("Data");
             }
             else
@@ -85,19 +78,7 @@ public class Service : System.Web.Services.WebService
         }
     }
 
-    private void saveToBD(string oTrama)
-    {
-        if (remesasDTO.saveXML("WebService",oTrama))
-        {
-            string resp = "Ok";
-        }
-        else
-        {
-            string resp = "error";
-        }
-   
-    }
-
+  
     private void StoreData(string data, string oUser, string oPassword)
     {      
      
@@ -127,6 +108,35 @@ public class Service : System.Web.Services.WebService
             throw ex;
         }
 
+    }
+
+    private string StoreXML(string data)
+    {
+        string strName = helper.GenerateRandomString(5);
+
+        string filaNamePost = strName + "_" + DateTime.Today.ToString("dd-MM-yy") + ".xml";
+        try
+        {
+
+            string FILENAME = Server.MapPath("~/File/" + filaNamePost);
+            StreamWriter objStreamWriter;
+            objStreamWriter = File.AppendText(FILENAME);
+
+
+            string StrDataWR = string.Format(data);
+
+            objStreamWriter.WriteLine(StrDataWR);
+            objStreamWriter.Close();
+
+           
+        }
+        catch (Exception ex)
+        {
+            ExceptionLogging.SendErrorToText(ex, false);
+            throw ex;
+        }
+
+        return filaNamePost;
     }
 
     #endregion

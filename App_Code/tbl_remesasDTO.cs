@@ -157,7 +157,8 @@ public class tbl_remesasDTO
         }
         catch (Exception e)
         {
-            throw;
+            //throw;
+            ExceptionLogging.SendErrorToText(e, false);
 
         }
 
@@ -206,26 +207,29 @@ public class tbl_remesasDTO
 
     }
 
-    public bool saveXML(string usuario,  string strXML)
+    public bool saveXmlToBd(string usuario,  string fileName)
     {
 
+
+
+
         tbl_remesasDTO _remesas = new tbl_remesasDTO();
-        _remesas.UsuarioCarga = ObtenerUsuarioTopaz(usuario.ToLower());
+        //_remesas.UsuarioCarga = ObtenerUsuarioTopaz(usuario.ToLower());
         // string Domain = HttpContext.Current.Request.Url.Authority;
 
-        XDocument xDoc = XDocument.Parse(strXML);
+       // XDocument xDoc = XDocument.Parse(strXML);
      
         //File.WriteAllText("xmlremesa.xml", strXML, Encoding.ASCII);
 
         try
         {
-            if (strXML != null)
+            if (fileName != null)
             {
                 // string archivo = usuario + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(fileXml.FileName);
                 //fileXml.SaveAs(HttpContext.Current.Server.MapPath("~/upload/" + archivo));
 
-                // string path = HttpContext.Current.Server.MapPath("~/upload/" + archivo);
-                String path = strXML;
+                 string path = HttpContext.Current.Server.MapPath("~/File/" + fileName);
+              //  String path = "~/File/" + fileName;
 
 
                 String URLString = path;

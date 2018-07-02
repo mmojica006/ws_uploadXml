@@ -4,18 +4,24 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Xml;
 
 /// <summary>
 /// Summary description for SqlHelper
 /// </summary>
-public class SqlHelper
+public  class SqlHelper
 {
     public SqlHelper()
     {
 
     }
+
+
+
     #region Parámetros de conexión
 
     private string strNombreCadenaConexion = "dbContext";
@@ -320,7 +326,49 @@ public class SqlHelper
         }
     }
 
+    public void sendEmail(String from, String passwordFrom, List<String> recipients, String subject, String body)
+    {
+        try
+        {
+
+        
+        MailMessage msg = new MailMessage();
+        
+
+        foreach (String rec in recipients)
+        {
+            msg.To.Add(new MailAddress(rec));
+        }
+        msg.From = new MailAddress(from);
+        msg.Subject = subject;
+        msg.Body = body;
+        msg.IsBodyHtml = true;
+        SmtpClient client = new SmtpClient();
+        client.Host = "smtp.office365.com";
+        client.Credentials = new System.Net.NetworkCredential(from, passwordFrom);
+        client.Port = int.Parse("587");
+        client.EnableSsl = true;
+        client.Send(msg);
+        }
+        catch( Exception ex)
+        {
+            throw;
+        }
+    }
+
     #endregion
+
+    public  string RemoverStrs(string str, string[] removeStrs)
+    {
+        foreach (var removeStr in removeStrs)
+            str = str.Replace(removeStr, "");
+        return str;
+    }
+    public  string GenerateRandomString(int size)
+    {
+       return  Guid.NewGuid().ToString("n").Substring(0, size);
+    }
+
 
 
 }

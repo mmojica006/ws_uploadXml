@@ -1,0 +1,288 @@
+-----------Exception Details on  7/2/2018 7:23:02 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 7:23:02 AM
+
+Error Line No : ine 233
+
+Error Message: ArgumentException
+
+Exception Type: System.ArgumentException
+
+Error Location : Illegal characters in path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 7:27:27 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 7:27:27 AM
+
+Error Line No : ine 233
+
+Error Message: ArgumentException
+
+Exception Type: System.ArgumentException
+
+Error Location : Illegal characters in path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 8:03:23 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 8:03:23 AM
+
+Error Line No : ine 236
+
+Error Message: ArgumentException
+
+Exception Type: System.ArgumentException
+
+Error Location : Illegal characters in path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 8:28:51 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 8:28:51 AM
+
+Error Line No : ine 128
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : '~/File/???|_02-07-18.xml' is not a valid virtual path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 8:28:51 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 8:28:51 AM
+
+Error Line No : line 52
+
+Error Message: HttpException
+
+Exception Type: System.Web.HttpException
+
+Error Location : '~/File/???|_02-07-18.xml' is not a valid virtual path.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 9:03:17 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 9:03:17 AM
+
+Error Line No : ine 238
+
+Error Message: DirectoryNotFoundException
+
+Exception Type: System.IO.DirectoryNotFoundException
+
+Error Location : Could not find a part of the path 'C:\Program Files (x86)\IIS Express\~\File\e9ef5_02-07-18.xml'.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 9:04:58 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 9:04:58 AM
+
+Error Line No : ine 238
+
+Error Message: XmlException
+
+Exception Type: System.Xml.XmlException
+
+Error Location : System does not support 'UTF - 8' encoding. Line 1, position 31.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 10:22:05 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 10:22:05 AM
+
+Error Line No : ine 439
+
+Error Message: SqlException
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'USPCE_WU_PagosRemesas' expects parameter '@Salida', which was not supplied.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 10:25:03 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 10:25:03 AM
+
+Error Line No : ine 439
+
+Error Message: SqlException
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'USPCE_WU_PagosRemesas' expects parameter '@Salida', which was not supplied.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 10:43:07 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 10:43:07 AM
+
+Error Line No : ine 439
+
+Error Message: SqlException
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'USPCE_WU_PagosRemesas' expects parameter '@Salida', which was not supplied.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 11:09:55 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 11:09:55 AM
+
+Error Line No : ine 133
+
+Error Message: SqlException
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'USPCE_WU_PagosRemesas' expects parameter '@Salida', which was not supplied.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  7/2/2018 11:54:38 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 7/2/2018 11:54:38 AM
+
+Error Line No : ine 133
+
+Error Message: SqlException
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Procedure or function 'USPCE_WU_PagosRemesas' expects parameter '@Salida', which was not supplied.
+
+ Error Page Url: http://localhost:59689/Service.asmx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
